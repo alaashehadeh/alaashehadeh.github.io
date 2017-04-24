@@ -1,0 +1,431 @@
+/** fonts **/
+@font-face {
+  font-family: 'Raleway-Regular';
+  src: url('../Fonts/raleway/Raleway-Regular.ttf');
+}
+@font-face {
+  font-family: 'Raleway-ExtraBold';
+  src: url('../Fonts/raleway/Raleway-ExtraBold.ttf');
+}
+@font-face {
+  font-family: 'Raleway-SemiBold';
+  src: url('../Fonts/raleway/Raleway-SemiBold.ttf');
+}
+/** colors **/
+/** media **/
+/** LESS classes **/
+.horzintal_padding {
+  padding-left: 1vw;
+  padding-right: 1vw;
+}
+.vertical_padding {
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+}
+.horzintal_margin {
+  margin-left: 1vw;
+  margin-right: 1vw;
+}
+.vertical_margin {
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+}
+.icon-spaces {
+  padding-left: 2vw;
+  padding-right: 2vw;
+  padding-top: 4vh;
+}
+.center-layers {
+  margin: 0 auto;
+}
+/** LESS functions **/
+body {
+  margin: 0px !important;
+  overflow-x: hidden;
+}
+.result-container {
+  min-height: 60vh;
+  background: url("../Images/Magnify@2x.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 12%;
+  background-color: #383A49;
+  overflow: auto;
+}
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  .result-container {
+    background-size: 30%;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .result-container {
+    background-size: 50%;
+  }
+}
+.result-container .message {
+  color: #464858;
+  font-family: "Raleway-Regular";
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  margin-top: 47vh;
+  font-size: 22px;
+}
+.welcome {
+  height: 100vh;
+  background: url("../Images/hero-img@2x.png");
+  background-color: #CB427F;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  background-position: center;
+  background-size: 50%;
+  background-repeat: no-repeat;
+}
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  .welcome {
+    background-size: 70%;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .welcome {
+    background-size: 90%;
+  }
+}
+/** search area **/
+button {
+  font-family: Raleway-SemiBold;
+  margin: 1%;
+  text-align: center;
+  color: #fff;
+  background-color: #CB427F;
+  border: none;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+  text-transform: uppercase;
+  float: right;
+  width: 20%;
+  font-size: 14px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+@media only screen and (max-width: 479px) {
+  button {
+    font-size: 11px;
+  }
+}
+.next {
+  text-align: center;
+  color: #464858;
+}
+.next button {
+  float: none;
+  margin-top: 4vh;
+  margin-bottom: 4vh;
+  width: 16%;
+}
+.search-bar {
+  width: 98vw;
+  background-color: #333441;
+  text-align: center;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+}
+.search-bar .search-container {
+  overflow: auto;
+  width: 50%;
+  margin: 0 auto;
+  background-color: #fff;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+}
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  .search-bar .search-container {
+    width: 90%;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .search-bar .search-container {
+    width: 90%;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+  }
+}
+.search-bar .search-container input[type=text] {
+  color: #333441;
+  font-family: Raleway-SemiBold;
+  font-size: 18px;
+  border: none;
+  width: 70%;
+  float: left;
+  padding: 1.3vw;
+}
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  .search-bar .search-container input[type=text] {
+    margin-top: 1vh;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .search-bar .search-container input[type=text] {
+    margin-top: 0.5vh;
+    font-size: 16px;
+  }
+}
+.search-result {
+  max-width: 1170px;
+  margin: 0 auto;
+  margin-top: 4vh;
+}
+.card {
+  background-color: #fff;
+  width: 22%;
+  height: 350px;
+  margin: 1.5%;
+  margin-top: 3%;
+  float: right;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 5px 19px 5px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 5px 19px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 5px 19px 5px rgba(0, 0, 0, 0.5);
+}
+.card .info {
+  padding: 8%;
+  width: 84%;
+  font-family: Raleway-SemiBold;
+  /* Hide the text. */
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+  font-size: 18px;
+}
+.card #artists-0,
+.card #albums-0 {
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
+.card .artistBg {
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  width: 19vw;
+  z-index: 1;
+  font-family: 'Raleway-SemiBold';
+  font-size: 20px;
+}
+@media only screen and (max-width: 479px) {
+  .card .artistBg {
+    width: 94vw;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  .card .artistBg {
+    width: 48vw;
+  }
+}
+.card .artistBg img {
+  margin-top: 10vh;
+  width: 12vw !important;
+}
+@media only screen and (max-width: 479px) {
+  .card .artistBg img {
+    width: 34vw !important;
+  }
+}
+.card .cover {
+  height: 80%;
+}
+.card .cover img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.card .cover .artists {
+  background: url("../Images/artist-icon@2x.png");
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  margin-top: 36vh;
+  margin-left: 1vw;
+  background-size: 30px 30px;
+}
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  .card .cover .artists {
+    margin-top: 22vh;
+  }
+}
+.card .cover .albums {
+  background: url("../Images/album-icon@2x.png");
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  margin-top: 36vh;
+  margin-left: 1vw;
+  background-size: 40px 40px;
+}
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  .card .cover .albums {
+    margin-top: 22vh;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  .card {
+    width: 47%;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .card {
+    width: 94%;
+    margin-right: 3vw;
+  }
+}
+.modal {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 1;
+  background: rgba(70, 72, 88, 0.5);
+}
+.modalBody {
+  width: 50vw;
+  left: 25vw;
+  top: 120vh;
+  min-height: 90vh;
+  background: #fff;
+  margin: 0 auto;
+  position: absolute;
+  z-index: 2;
+  -webkit-box-shadow: 0px 5px 19px 5px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 5px 19px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 5px 19px 5px rgba(0, 0, 0, 0.5);
+}
+@media only screen and (max-width: 479px) {
+  .modalBody {
+    width: 94vw;
+    left: 3vw;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  .modalBody {
+    width: 80vw;
+    left: 10vw;
+  }
+}
+.modalBody .cover {
+  width: 100%;
+  height: 50vh;
+  overflow: hidden;
+}
+.modalBody .cover img {
+  width: 100%;
+}
+.modalBody .cover .artist {
+  font-family: 'Raleway-SemiBold';
+  position: absolute;
+  left: 2vw;
+  top: 36vh;
+  color: #fff;
+  font-size: 32px;
+}
+.modalBody .close {
+  position: absolute;
+  top: 4vh;
+  right: 2vw;
+}
+.modalBody .close img {
+  width: 30px;
+  cursor: pointer;
+}
+.modalBody .albums-info {
+  padding-left: 2vw;
+  padding-right: 2vw;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  font-family: 'Raleway-SemiBold';
+  font-size: 18px;
+  height: 20vh;
+}
+.modalBody .albums-info hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #F5F5F6;
+  margin: 1em 0;
+  padding: 0;
+}
+.modalBody .albums-info .other-albums .other-cover {
+  float: left;
+  width: 120px;
+  height: 120px;
+  overflow: hidden;
+}
+.modalBody .albums-info .other-albums .other-info {
+  font-family: 'Raleway-Regular';
+  padding-top: 3vh;
+  margin-left: 10vw;
+}
+@media only screen and (max-width: 479px) {
+  .modalBody .albums-info .other-albums .other-info {
+    margin-left: 35vw;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  .modalBody .albums-info .other-albums .other-info {
+    margin-left: 18vw;
+  }
+}
+.modalBody .albums-info .other-albums .other-info .other-title {
+  font-family: 'Raleway-SemiBold';
+  font-size: 20px;
+}
+.modalBody .albums-info .other-albums .other-info .other-year {
+  color: #B3B4BD;
+  margin-top: 2vh;
+}
+.geek {
+  padding-left: 2vw;
+  padding-right: 2vw;
+  padding-top: 4vh;
+  max-width: 160px;
+}
+.geek img {
+  width: 50%;
+  height: auto;
+}
+.down-arrow {
+  bottom: 5%;
+  text-align: center;
+  width: 98vw;
+  position: absolute;
+}
+.down-arrow img {
+  width: 50px;
+  height: auto;
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+}
+.footer {
+  width: 100%;
+  height: 4vh;
+  text-align: center;
+  color: #fff;
+  background-color: #333441;
+  font-family: 'Raleway-Regular';
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+}
