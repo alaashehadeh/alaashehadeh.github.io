@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="bower_components/font-awesome/css/font-awesome.min.css" type="text/css" rel="stylesheet"/>
+    <link href="style/style.css" type="text/css" rel="stylesheet">
+    <title>Music Search</title>
+</head>
+<body ng-app="compucorp" ng-controller="searchController">
+
+
+<div class="container">
+    <div class="welcome">
+        <!-- geek logo -->
+        <div class="geek"><img src="Images/gl-logo@2x.png"></div>
+
+        <!-- down arrow -->
+        <div class="down-arrow">
+            <img src="images/Page 1@2x.png"/>
+        </div>
+
+    </div>
+
+    <!-- search area -->
+    <div class="search-bar">
+        <div class="search-container">
+            <form ng-submit="search(true)">
+                <input type="text" ng-model="keyword" placeholder="search for artist or album title" required/>
+                <button type="submit" animate-search>Search</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- search result -->
+    <div class="result-container">
+        <div class="message">
+            Your results will appear here
+        </div>
+
+        <!-- search result -->
+        <div class="search-result">
+            <modal class="card" ng-repeat="content in output track by $index" index="$index">
+                <div class="cover">
+                    <div class="{{content.type}}"></div>
+                    <!-- show artist first card -->
+                    <div class="artistBg" ng-show="content.number == 0">
+                        <img src="Images/Bitmap@2x.png" />
+                        <div ng-if="content.type == 'artists'">View Albums</div>
+
+                        <div ng-if="content.type == 'albums'">View Tracks</div>
+                    </div>
+
+                    <img ng-src="{{content.content.images[0].url}}" id="{{content.type}}-{{content.number}}" />
+                </div>
+                <div class="info">
+                    {{content.content.name}}
+                </div>
+            </modal>
+
+            <!-- next icon -->
+            <div class="next" ng-if="next">
+                <button ng-click="search()">SHOW ME MORE!</button>
+            </div>
+
+            <!-- next page loader -->
+            <div class="next" ng-if="nextLoader" ng-show="page > -1">
+                <i class="fa fa-spinner fa-spin fa-5x"></i>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="footer">
+        Designed by Geek Label - Powered by Spotify
+    </div>
+</div>
+<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="js/directives.js"></script>
+<script type="text/javascript" src="js/services.js"></script>
+<script type="text/javascript" src="js/searchController.js"></script>
+</body>
+</html>
